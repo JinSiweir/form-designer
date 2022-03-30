@@ -53,8 +53,8 @@
         !record.options.dynamic
           ? record.options.options
           : dynamicData[record.options.dynamicKey]
-          ? dynamicData[record.options.dynamicKey]
-          : []
+            ? dynamicData[record.options.dynamicKey]
+            : []
       "
       :disabled="record.options.disabled || parentDisabled"
       :placeholder="record.options.placeholder"
@@ -70,8 +70,8 @@
         !record.options.dynamic
           ? record.options.options
           : dynamicData[record.options.dynamicKey]
-          ? dynamicData[record.options.dynamicKey]
-          : []
+            ? dynamicData[record.options.dynamicKey]
+            : []
       "
       :disabled="record.options.disabled || parentDisabled"
       :placeholder="record.options.placeholder"
@@ -111,8 +111,7 @@
     <component
       v-else
       :style="
-        `width:${
-          record.options.width !== '100%' ? record.options.width : '120px'
+        `width:${record.options.width !== '100%' ? record.options.width : '120px'
         }`
       "
       v-bind="componentOption"
@@ -129,7 +128,7 @@
       :count="record.options.max"
       :precision="
         record.options.precision > 50 ||
-        (!record.options.precision && record.options.precision !== 0)
+          (!record.options.precision && record.options.precision !== 0)
           ? null
           : record.options.precision
       "
@@ -142,27 +141,27 @@
       :filterOption="
         record.options.showSearch
           ? (inputValue, option) => {
-              return (
-                option.componentOptions.children[0].text
-                  .toLowerCase()
-                  .indexOf(inputValue.toLowerCase()) >= 0
-              );
-            }
+            return (
+              option.componentOptions.children[0].text
+                .toLowerCase()
+                .indexOf(inputValue.toLowerCase()) >= 0
+            );
+          }
           : false
       "
       :treeData="
         !record.options.dynamic
           ? record.options.options
           : dynamicData[record.options.dynamicKey]
-          ? dynamicData[record.options.dynamicKey]
-          : []
+            ? dynamicData[record.options.dynamicKey]
+            : []
       "
       :options="
         !record.options.dynamic
           ? record.options.options
           : dynamicData[record.options.dynamicKey]
-          ? dynamicData[record.options.dynamicKey]
-          : []
+            ? dynamicData[record.options.dynamicKey]
+            : []
       "
       :mode="record.options.multiple ? 'multiple' : ''"
       :checked="value"
@@ -186,10 +185,7 @@
     </div>
   </a-form-model-item>
   <!-- html -->
-  <div
-    v-else-if="record.type === 'html'"
-    v-html="record.options.defaultValue"
-  ></div>
+  <div v-else-if="record.type === 'html'" v-html="record.options.defaultValue"></div>
 
   <div v-else>
     <!-- 空 -->

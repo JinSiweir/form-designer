@@ -1,9 +1,9 @@
 <!--
  * @Description: 表单设计器内容展示操作组件
- * @Author: kcz
- * @Date: 2019-12-31 19:39:48
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-28 00:27:22
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <div class="form-panel">
@@ -12,7 +12,7 @@
     </p>
 
     <a-form
-      class="a-form-box k-form-build"
+      class="a-form-box "
       :form="form"
       :layout="data.config.layout"
       :hideRequiredMark="data.config.hideRequiredMark"

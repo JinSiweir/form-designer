@@ -1,5 +1,5 @@
 <template>
-  <s-w-form-design hideResetHint />
+  <s-w-form-design  />
 </template>
 
 <script>

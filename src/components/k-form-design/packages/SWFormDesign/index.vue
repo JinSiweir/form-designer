@@ -288,12 +288,12 @@
         data: {
           list: [],
           config: {
-            layout: 'horizontal',
+            layout: 'horizontal',                   //表单布局
             labelCol: { xs: 4, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4 },
             labelWidth: 100,
-            labelLayout: 'flex',
+            labelLayout: 'flex',                    
             wrapperCol: { xs: 18, sm: 18, md: 18, lg: 18, xl: 18, xxl: 18 },
-            hideRequiredMark: false,
+            hideRequiredMark: false,               // 表单必选必选标记
             customStyle: '',
           },
         },
@@ -318,7 +318,8 @@
       formProperties,
     },
     watch: {
-      data: {
+      //监听content 数组 用作记录
+       data: {
         handler(e) {
           this.$nextTick(() => {
             this.revoke.push(e);
@@ -351,7 +352,7 @@
     },
     methods: {
       // 利用computed缓存以及prop来对组件暂存
-      // list === this.basicsArray
+      // list === this.basicsArray    true,
       generateKey(list, index) {
         // 生成key值
         const key = list[index].type + '_' + new Date().getTime();
@@ -364,7 +365,6 @@
           // 删除不需要的model属性
           delete list[index].model;
         }
-        console.log(this.basicsArray === list);
       },
       handleListPush(item) {
         // 双击控件按钮push到list
