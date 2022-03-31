@@ -1,30 +1,33 @@
 <template>
   <a-config-provider :locale="locale">
-    <a-form
-      v-if="
-        typeof value.list !== 'undefined' && typeof value.config !== 'undefined'
-      "
-      class="k-form-build-9136076486841527"
-      :layout="value.config.layout"
-      :hideRequiredMark="value.config.hideRequiredMark"
-      :form="form"
-      @submit="handleSubmit"
-      :style="value.config.customStyle"
-    >
-      <buildBlocks
-        ref="buildBlocks"
-        @handleReset="reset"
-        v-for="(record, index) in value.list"
-        :record="record"
-        :dynamicData="getDynamicData"
-        :config="config"
-        :disabled="disabled"
-        :formConfig="value.config"
-        :validatorError="validatorError"
-        :key="index"
-        @change="handleChange"
-      />
-    </a-form>
+    <a-card>
+      <a-form
+        v-if="
+          typeof value.list !== 'undefined' &&
+          typeof value.config !== 'undefined'
+        "
+        class="s-w-form-build"
+        :layout="value.config.layout"
+        :hideRequiredMark="value.config.hideRequiredMark"
+        :form="form"
+        @submit="handleSubmit"
+        :style="value.config.customStyle"
+      >
+        <buildBlocks
+          ref="buildBlocks"
+          @handleReset="reset"
+          v-for="(record, index) in value.list"
+          :record="record"
+          :dynamicData="getDynamicData"
+          :config="config"
+          :disabled="disabled"
+          :formConfig="value.config"
+          :validatorError="validatorError"
+          :key="index"
+          @change="handleChange"
+        />
+      </a-form>
+    </a-card>
   </a-config-provider>
 </template>
 <script>
