@@ -1,9 +1,9 @@
 <!--
- * @Description: 折叠组件
- * @Author: kcz
- * @Date: 2020-01-13 00:37:54
- * @LastEditors: kcz
- * @LastEditTime: 2020-03-28 11:32:39
+ * @Description: 左侧组件
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <draggable

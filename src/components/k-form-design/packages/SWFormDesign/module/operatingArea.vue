@@ -1,9 +1,9 @@
 <!--
- * @Description: 头部
- * @Author: kcz
- * @Date: 2019-12-30 00:37:05
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-27 23:01:59
+ * @Description: 操作按钮区域
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <div class="operating-area">

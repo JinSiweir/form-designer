@@ -1,9 +1,9 @@
 <!--
  * @Description: 对上传图片组件进行封装
- * @Author: kcz
- * @Date: 2020-03-17 12:53:50
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-05 12:12:39
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <div :style="{ width: record.options.width }" class="upload-img-box">

@@ -1,9 +1,9 @@
 <!--
  * @Description: 传入record数据，通过判断record.type，来渲染对应的组件
- * @Author: kcz
- * @Date: 2020-01-02 22:41:48
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-28 00:59:02
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <a-form-item
@@ -384,7 +384,7 @@ import ComponentArray from "../core/components_use";
 const _ = require("lodash/object");
 
 export default {
-  name: "KFormItem",
+  name: "KFormItem", 
   props: {
     // 表单数组
     record: {

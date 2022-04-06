@@ -1,11 +1,17 @@
 <template>
+<!--
+ * author 
+ * date 
+ * description 生成json Modal
+ */
+-->
   <a-modal
     title="JSON数据"
     :footer="null"
     :visible="visible"
     @cancel="handleCancel"
     :destroyOnClose="true"
-    wrapClassName="code-modal-9136076486841527"
+    wrapClassName="code-modal"
     style="top:20px;"
     width="850px"
   >
@@ -13,11 +19,7 @@
   </a-modal>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- * description 生成json Modal
- */
+
 import previewCode from "../../PreviewCode/index";
 export default {
   name: "JsonModal",

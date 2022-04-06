@@ -1,3 +1,10 @@
+<!--
+ * author 
+ * date 
+ * description :
+        递归调用layoutItem组件 
+ -->
+
 <template>
   <div
     :class="{
@@ -31,8 +38,8 @@
           "
           :style="
             config.layout === 'horizontal' &&
-            config.labelLayout === 'flex' &&
-            record.options.showLabel
+              config.labelLayout === 'flex' &&
+              record.options.showLabel
               ? { display: 'flex' }
               : {}
           "
@@ -110,21 +117,15 @@
           "
           :style="
             config.layout === 'horizontal' &&
-            config.labelLayout === 'flex' &&
-            record.options.showLabel
+              config.labelLayout === 'flex' &&
+              record.options.showLabel
               ? { display: 'flex' }
               : {}
           "
         >
-          <div
-            class="column-box"
-            v-for="(column, index) in record.columns"
-            :key="index"
-          >
+          <div class="column-box" v-for="(column, index) in record.columns" :key="index">
             <div class="check-box">
-              <a-checkbox v-if="record.options.multiple" disabled>
-                {{ column.label }}
-              </a-checkbox>
+              <a-checkbox v-if="record.options.multiple" disabled>{{ column.label }}</a-checkbox>
               <a-radio-group v-else disabled name="radio">
                 <a-radio :value="column.value">{{ column.label }}</a-radio>
               </a-radio-group>
@@ -194,11 +195,7 @@
           :tabPosition="record.options.tabPosition"
           :animated="record.options.animated"
         >
-          <a-tab-pane
-            v-for="(tabItem, index) in record.columns"
-            :key="index"
-            :tab="tabItem.label"
-          >
+          <a-tab-pane v-for="(tabItem, index) in record.columns" :key="index" :tab="tabItem.label">
             <div class="grid-col">
               <draggable
                 tag="div"
@@ -388,7 +385,7 @@
         @click.stop="handleSelectItem(record)"
       >
         <table
-          class="table-layout kk-table-9136076486841527"
+          class="table-layout kk-table"
           :class="{
             bright: record.options.bright,
             small: record.options.small,
@@ -482,11 +479,7 @@
   </div>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- * description 使用递归组件调用自己，生成布局结构及表单
- */
+
 import draggable from "vuedraggable";
 import formNode from "./formNode";
 export default {

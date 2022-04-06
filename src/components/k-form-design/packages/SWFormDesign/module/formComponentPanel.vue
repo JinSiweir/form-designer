@@ -72,7 +72,7 @@
     </div>
   </div>
 </template>
-<script>
+<script> 
 import draggable from "vuedraggable";
 import layoutItem from "./layoutItem";
 import "codemirror/mode/javascript/javascript";
