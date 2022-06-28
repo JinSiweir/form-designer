@@ -1,9 +1,5 @@
 <!--
  * @Description: 对上传图片组件进行封装
- * @Author: 
- * @Date: 
- * @LastEditors: 
- * @LastEditTime: 
  -->
 <template>
   <div :style="{ width: record.options.width }" class="upload-img-box">
@@ -48,11 +44,7 @@
   </div>
 </template>
 <script>
-  /*
-   * author kcz
-   * date 2019-12-31
-   * description 上传图片组件
-   */
+
   export default {
     name: 'KUploadImg',
     // eslint-disable-next-line vue/require-prop-types

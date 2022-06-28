@@ -1,9 +1,5 @@
 <!--
  * @Description: 多列选择 用于选择并且需要输入的表单
- * @Author: 
- * @Date: 
- * @LastEditors: 
- * @LastEditTime: 
  -->
 <template>
   <a-form-model

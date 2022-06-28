@@ -1,10 +1,4 @@
-<!--
- * @Description: 传入record数据，通过判断record.type，来渲染对应的组件
- * @Author: kcz
- * @Date: 2020-01-02 22:41:48
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-15 16:32:09
- -->
+
 <template>
   <a-form-model-item
     v-if="
@@ -192,10 +186,7 @@
   </div>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- */
+
 // import moment from "moment";
 
 import UploadFile from "../../UploadFile";

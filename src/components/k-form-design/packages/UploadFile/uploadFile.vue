@@ -51,11 +51,7 @@
   </div>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-12-31
- * description 上传文件组件
- */
+
 export default {
   name: "KUploadFile",
   // eslint-disable-next-line vue/require-prop-types

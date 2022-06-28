@@ -20,8 +20,7 @@
 </template>
 <script>
   /*
-   * author kcz
-   * date 2019-11-20
+   * author  预览model
    */
   import jsonModel from '../SWFormDesign/module/jsonModal';
   import { dialogStyle, bodyStyle } from '../config/modal.js';

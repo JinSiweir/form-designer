@@ -1,9 +1,5 @@
 /*
  * @Description: 组件输出文件,不打包antd ui组件
- * @Author:
- * @Date:
- * @LastEditors:
- * @LastEditTime:
  */
 
 // window.$customComponentList 自定义组件列表

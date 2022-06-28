@@ -1,9 +1,5 @@
 <!--
  * @Description: 时间选择器
- * @Author: 
- * @Date: 
- * @LastEditors: 
- * @LastEditTime: 
  -->
 <template>
   <a-time-picker
