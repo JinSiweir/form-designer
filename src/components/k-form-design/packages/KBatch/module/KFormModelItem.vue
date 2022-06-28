@@ -1,9 +1,9 @@
 <!--
- * @Description: 传入record数据，通过判断record.type，来渲染对应的组件
- * @Author: kcz
- * @Date: 2020-01-02 22:41:48
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-14 17:30:17
+ * @Description: 
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <a-form-model-item
@@ -193,8 +193,8 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
+ * author 
+ * date 
  */
 // import moment from "moment";
 

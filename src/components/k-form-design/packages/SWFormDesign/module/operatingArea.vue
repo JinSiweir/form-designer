@@ -25,26 +25,20 @@
       </a-tooltip>
 
       <a-tooltip title="导入">
-        <a
-          v-if="toolbars.includes('importJson')"
-          @click="$emit('handleOpenImportJsonModal')"
-        >
+        <a v-if="toolbars.includes('importJson')" @click="$emit('handleOpenImportJsonModal')">
           <a-icon type="upload" />
           <span v-if="showToolbarsText">导入</span>
         </a>
       </a-tooltip>
 
       <a-tooltip title="生成JSON">
-        <a
-          v-if="toolbars.includes('exportJson')"
-          @click="$emit('handleOpenJsonModal')"
-        >
+        <a v-if="toolbars.includes('exportJson')" @click="$emit('handleOpenJsonModal')">
           <a-icon type="credit-card" />
           <span v-if="showToolbarsText">生成JSON</span>
         </a>
       </a-tooltip>
 
-      <a-tooltip title="生成代码">
+      <!-- <a-tooltip title="生成代码">
         <a
           v-if="toolbars.includes('exportCode')"
           @click="$emit('handleOpenCodeModal')"
@@ -52,7 +46,7 @@
           <a-icon type="code" />
           <span v-if="showToolbarsText">生成代码</span>
         </a>
-      </a-tooltip>
+      </a-tooltip> -->
 
       <a-tooltip title="清空">
         <a v-if="toolbars.includes('reset')" @click="$emit('handleReset')">
@@ -62,21 +56,14 @@
       </a-tooltip>
       <a-divider type="vertical" />
       <a-tooltip title="撤销">
-        <a
-          v-if="toolbars.includes('undo')"
-          :class="{ disabled: !(recordList.length > 0) }"
-          @click="$emit('handleUndo')"
-        >
+        <a v-if="toolbars.includes('undo')" :class="{ disabled: !(recordList.length > 0) }"
+          @click="$emit('handleUndo')">
           <a-icon type="undo" />
           <span v-if="showToolbarsText">撤销</span>
         </a>
       </a-tooltip>
       <a-tooltip title="重做">
-        <a
-          v-if="toolbars.includes('redo')"
-          :class="{ disabled: !(redoList.length > 0) }"
-          @click="$emit('handleRedo')"
-        >
+        <a v-if="toolbars.includes('redo')" :class="{ disabled: !(redoList.length > 0) }" @click="$emit('handleRedo')">
           <a-icon type="redo" />
           <span v-if="showToolbarsText">重做</span>
         </a>
@@ -117,7 +104,9 @@ export default {
         "exportJson",
         "exportCode",
         "reset",
-        "close"
+        "close",
+        'undo',
+        'redo',
       ]
     },
     recordList: {

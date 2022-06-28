@@ -31,6 +31,7 @@ export const basicsList = [
         message: '必填项',
       },
     ],
+    event:[],
   },
   {
     type: 'textarea', // 表单类型

@@ -1,9 +1,9 @@
 <!--
  * @Description: 时间选择器
- * @Author: kcz
- * @Date: 2020-01-11 17:30:48
- * @LastEditors: kcz
- * @LastEditTime: 2020-03-28 17:35:43
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <a-time-picker

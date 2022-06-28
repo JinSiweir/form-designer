@@ -41,6 +41,9 @@ import {
   TreeSelect
 } from "ant-design-vue";
 import vcolorpicker from "vcolorpicker";
+const VueCodeMirror = require('vue-codemirror-lite')
+
+
 
 import KBatch from "../KBatch";
 import KSelectInputList from "../KSelectInputList";
@@ -101,6 +104,7 @@ Vue.use(DatePicker);
 Vue.use(TimePicker);
 Vue.use(Upload);
 Vue.use(vcolorpicker);
+Vue.use(VueCodeMirror);
 
 Vue.prototype.$confirm = Modal.confirm;
 Vue.prototype.$message = message;

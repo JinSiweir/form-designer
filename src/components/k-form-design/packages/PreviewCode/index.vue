@@ -74,7 +74,7 @@ export default {
       setTimeout(() => {
         // 销毁实例
         clipboard.destroy();
-      }, 122);
+      }, 77);
     }
   }
 };

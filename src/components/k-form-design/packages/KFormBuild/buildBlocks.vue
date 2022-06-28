@@ -112,7 +112,7 @@
       </td>
     </tr>
   </table>
-
+   
   <KFormItem
     v-else-if="!record.options.hidden"
     ref="nestedComponents"
@@ -128,8 +128,8 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
+ * author 
+ * date 
  */
 import KFormItem from "../KFormItem/index";
 export default {
@@ -192,7 +192,7 @@ export default {
       this.$emit("change", value, key);
     }
   },
-  watch: {
+  watch: { 
     /**
      * @author: lizhichao<meteoroc@outlook.com>
      * @description: 监视validatorError对象，当检测到Tabs中有表单校验无法通过时，切换到最近校验失败的tab页。

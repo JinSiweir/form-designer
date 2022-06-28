@@ -1,40 +1,9 @@
 <template>
   <a-config-provider :locale="locale">
     <div class="form-designer">
-      <s-header v-if="showHead" :title="title" />
-      <!-- 操作区域 start -->
-      <operatingArea
-        v-if="toolbarsTop"
-        :showToolbarsText="showToolbarsText"
-        :toolbars="toolbars"
-        @handleSave="handleSave"
-        @handlePreview="handlePreview"
-        @handleOpenImportJsonModal="handleOpenImportJsonModal"
-        @handleOpenCodeModal="handleOpenCodeModal"
-        @handleOpenJsonModal="handleOpenJsonModal"
-        @handleReset="handleReset"
-        @handleClose="handleClose"
-        @handleUndo="handleUndo"
-        @handleRedo="handleRedo"
-        :recordList="recordList"
-        :redoList="redoList"
-      >
-        <template slot="left-action">
-          <slot name="left-action"></slot>
-        </template>
-
-        <template slot="right-action">
-          <slot name="right-action"></slot>
-        </template>
-      </operatingArea>
-      <!-- 操作区域 end -->
       <div
-        class="content"
-        :class="{
-          'show-head': showHead,
-          'toolbars-top': toolbarsTop,
-          'show-head-and-toolbars-top': toolbarsTop && showHead,
-        }"
+        class="content show-head toolbars-top show-head-and-toolbars-top"
+
       >
         <!-- 左侧控件区域 start -->
         <aside class="left">
@@ -93,9 +62,6 @@
         <section>
           <!-- 操作区域 start -->
           <operatingArea
-            v-if="!toolbarsTop"
-            :showToolbarsText="showToolbarsText"
-            :toolbars="toolbars"
             @handleSave="handleSave"
             @handlePreview="handlePreview"
             @handleOpenImportJsonModal="handleOpenImportJsonModal"
@@ -118,7 +84,7 @@
           </operatingArea>
           <!-- 操作区域 end -->
           <k-form-component-panel
-            :class="{ 'no-toolbars-top': !toolbarsTop }"
+            class="no-toolbars-top"
             :data="data"
             :selectItem="selectItem"
             :noModel="noModel"
@@ -168,7 +134,7 @@
    * date 2019-11-20
    * description 表单设计器
    */
-  import SHeader from './module/header';
+  
   import operatingArea from './module/operatingArea';
 
   // import kFooter from "./module/footer";
@@ -191,40 +157,6 @@
   export default {
     name: 'SWFormDesign',
     props: {
-      title: {
-        type: String,
-        default: '表单设计器',
-      },
-      showHead: {
-        type: Boolean,
-        default: false,
-      },
-      hideResetHint: {
-        type: Boolean,
-        default: false,
-      },
-      toolbarsTop: {
-        type: Boolean,
-        default: false,
-      },
-      toolbars: {
-        type: Array,
-        default: () => [
-          'save',
-          'preview',
-          'importJson',
-          'exportJson',
-          'exportCode',
-          'reset',
-          'close',
-          'undo',
-          'redo',
-        ],
-      },
-      showToolbarsText: {
-        type: Boolean,
-        default: false,
-      },
       fields: {
         type: Array,
         default: () => [
@@ -257,14 +189,10 @@
           'table',
         ],
       },
-      hideModel: {
-        // 隐藏数据字段
-        type: Boolean,
-        default: false,
-      },
     },
     data() {
       return {
+        hideModel:false,
         locale: zhCN,
         customComponents,
         activeKey: 1,
@@ -306,7 +234,6 @@
       };
     },
     components: {
-      SHeader,
       operatingArea,
       collapseItem,
       kJsonModal,
@@ -408,7 +335,7 @@
         this.$refs.importJsonModal.jsonData = this.data;
         this.$refs.importJsonModal.handleSetSelectItem =
           this.handleSetSelectItem;
-        this.$refs.importJsonModal.visible = true;
+        this.$refs.importJsonModal.visible = true;       
       },
       handlePreview() {
         // 打开预览模态框
@@ -418,12 +345,6 @@
       },
       handleReset() {
         // 清空
-        if (this.hideResetHint) {
-          // 不显示提示直接清空
-          this.resetData();
-          return;
-        }
-
         this.$confirm({
           title: '警告',
           content: '是否确认清空内容?',

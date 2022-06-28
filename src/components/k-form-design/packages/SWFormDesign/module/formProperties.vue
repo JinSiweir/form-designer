@@ -102,8 +102,8 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
+ * author 
+ * date 
  * description 表单属性设置面板组件
  */
 import kCheckbox from "../../KCheckbox/index.vue";

@@ -1,9 +1,9 @@
 <!--
  * @Description: 代码预览组件
- * @Author: kcz
- * @Date: 2019-12-30 00:37:05
- * @LastEditors: kcz
- * @LastEditTime: 2021-05-27 15:18:39
+ * @Author: 
+ * @Date: 
+ * @LastEditors: 
+ * @LastEditTime: 
  -->
 <template>
   <a-modal

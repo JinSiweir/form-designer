@@ -16,7 +16,7 @@
         <buildBlocks
           ref="buildBlocks"
           @handleReset="reset"
-          v-for="(record, index) in value.list"
+          v-for="(record, index) in value.list" 
           :record="record"
           :dynamicData="getDynamicData"
           :config="config"
@@ -32,8 +32,8 @@
 </template>
 <script>
   /*
-   * author kcz
-   * date 2019-11-20
+   * author 
+   * date 
    * description 将json数据构建成表单
    */
   import buildBlocks from './buildBlocks';

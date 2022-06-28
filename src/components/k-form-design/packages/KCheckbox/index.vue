@@ -5,8 +5,8 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
+ * author 
+ * date 
  * description 多选框组件,改成v-model Boolean值
  */
 export default {
