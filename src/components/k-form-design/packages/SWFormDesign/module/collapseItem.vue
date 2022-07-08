@@ -1,9 +1,5 @@
 <!--
  * @Description: 左侧组件
- * @Author: 
- * @Date: 
- * @LastEditors: 
- * @LastEditTime: 
  -->
 <template>
   <draggable

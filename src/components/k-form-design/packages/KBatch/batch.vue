@@ -1,10 +1,4 @@
-<!--
- * @Description: 
- * @Author: 
- * @Date: 
- * @LastEditors: 
- * @LastEditTime: 
- -->
+
 <template>
   <a-form-model
     ref="dynamicValidateForm"
